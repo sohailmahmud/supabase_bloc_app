@@ -149,13 +149,13 @@ supabase functions deploy send-push --no-verify-jwt
 ```
 
 ---
-#### ▶️ Running the App
+### ▶️ Running the App
 ```bash
 flutter run
 ```
 ---
 
-#### 📌 Usage Flow
+### 📌 Usage Flow
 1. Login with Supabase credentials.
 2. Dashboard loads user profile.
 3. User is automatically subscribed to FCM topic "all".
@@ -164,7 +164,7 @@ flutter run
 
 ---
 
-#### 📂 Example Key Files
+### 📂 Example Key Files
 * main.dart → initializes Firebase & Supabase
 * my_app.dart → root widget with routing & bloc setup
 * login_page.dart → login form with AuthBloc
@@ -173,7 +173,7 @@ flutter run
 
 ---
 
-#### 🔮 Next Steps
+### 🔮 Next Steps
 * Add role-based dashboards (e.g., admin vs user)
 * Group/topic-based notifications (admins, team_X, etc.)
 * Improve error handling + form validation
