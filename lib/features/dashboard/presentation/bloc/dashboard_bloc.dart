@@ -13,7 +13,8 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
     on<DashboardLoad>(_onLoad);
   }
 
-  Future<void> _onLoad(DashboardLoad event, Emitter<DashboardState> emit) async {
+  Future<void> _onLoad(
+      DashboardLoad event, Emitter<DashboardState> emit) async {
     emit(DashboardLoading());
     try {
       final profile = await getProfileUseCase(event.userId);

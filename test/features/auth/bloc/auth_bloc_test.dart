@@ -19,8 +19,9 @@ void main() {
   });
 
   test('emits AuthLoading and AuthSuccess on successful login', () async {
-    when(() => mockAuthRepository.login(email: 'test@test.com', password: '123456'))
-        .thenAnswer((_) async => 'user_id_123');
+    when(() => mockAuthRepository.login(
+        email: 'test@test.com',
+        password: '123456')).thenAnswer((_) async => 'user_id_123');
 
     final expectedStates = [
       AuthLoading(),
@@ -33,7 +34,8 @@ void main() {
   });
 
   test('emits AuthLoading and AuthFailure on failed login', () async {
-    when(() => mockAuthRepository.login(email: 'test@test.com', password: 'wrong'))
+    when(() =>
+            mockAuthRepository.login(email: 'test@test.com', password: 'wrong'))
         .thenThrow(Exception('Login failed'));
 
     final expectedStates = [

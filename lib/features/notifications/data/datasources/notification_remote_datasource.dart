@@ -14,5 +14,6 @@ class NotificationRemoteDataSourceImpl implements NotificationRemoteDataSource {
   Future<String?> getToken() => messaging.getToken();
 
   @override
-  Future<void> subscribeToTopic(String topic) => messaging.subscribeToTopic(topic);
+  Future<void> subscribeToTopic(String topic) =>
+      messaging.subscribeToTopic(topic);
 }

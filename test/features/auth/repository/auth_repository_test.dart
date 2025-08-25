@@ -21,7 +21,8 @@ void main() {
       const password = 'secret';
       const user = UserModel(id: 'uid-123', email: email);
 
-      when(() => mockRemote.login(email, password)).thenAnswer((_) async => user);
+      when(() => mockRemote.login(email, password))
+          .thenAnswer((_) async => user);
 
       final result = await repository.login(email: email, password: password);
 
@@ -61,5 +62,3 @@ void main() {
     });
   });
 }
-
-

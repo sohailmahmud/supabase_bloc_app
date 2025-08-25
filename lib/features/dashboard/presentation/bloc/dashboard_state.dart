@@ -6,11 +6,14 @@ abstract class DashboardState extends Equatable {
 }
 
 class DashboardInitial extends DashboardState {}
+
 class DashboardLoading extends DashboardState {}
+
 class DashboardLoaded extends DashboardState {
   final ProfileEntity profile;
   DashboardLoaded(this.profile);
 }
+
 class DashboardError extends DashboardState {
   final String message;
   DashboardError(this.message);

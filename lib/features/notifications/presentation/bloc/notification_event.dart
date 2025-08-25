@@ -6,6 +6,7 @@ abstract class NotificationEvent extends Equatable {
 }
 
 class NotificationInit extends NotificationEvent {}
+
 class NotificationSubscribe extends NotificationEvent {
   final String topic;
   NotificationSubscribe(this.topic);

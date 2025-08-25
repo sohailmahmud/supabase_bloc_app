@@ -6,11 +6,14 @@ abstract class NotificationState extends Equatable {
 }
 
 class NotificationInitial extends NotificationState {}
+
 class NotificationLoading extends NotificationState {}
+
 class NotificationReady extends NotificationState {
   final String? token;
   NotificationReady(this.token);
 }
+
 class NotificationError extends NotificationState {
   final String message;
   NotificationError(this.message);

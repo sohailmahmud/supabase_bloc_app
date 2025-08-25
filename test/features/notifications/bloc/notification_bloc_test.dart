@@ -4,8 +4,11 @@ import 'package:supabase_bloc_app/features/notifications/domain/usecases/get_dev
 import 'package:supabase_bloc_app/features/notifications/domain/usecases/subscribe_to_topic_usecase.dart';
 import 'package:supabase_bloc_app/features/notifications/presentation/bloc/notification_bloc.dart';
 
-class _MockGetDeviceTokenUseCase extends Mock implements GetDeviceTokenUseCase {}
-class _MockSubscribeToTopicUseCase extends Mock implements SubscribeToTopicUseCase {}
+class _MockGetDeviceTokenUseCase extends Mock
+    implements GetDeviceTokenUseCase {}
+
+class _MockSubscribeToTopicUseCase extends Mock
+    implements SubscribeToTopicUseCase {}
 
 void main() {
   late _MockGetDeviceTokenUseCase mockGetToken;
@@ -78,5 +81,3 @@ void main() {
     bloc.add(NotificationSubscribe('all'));
   });
 }
-
-

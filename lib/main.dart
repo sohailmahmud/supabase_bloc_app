@@ -34,7 +34,8 @@ void main() async {
   // Data sources
   final authDS = AuthRemoteDataSourceImpl(supabase);
   final dashboardDS = DashboardRemoteDataSourceImpl(supabase);
-  final notificationDS = NotificationRemoteDataSourceImpl(FirebaseMessaging.instance);
+  final notificationDS =
+      NotificationRemoteDataSourceImpl(FirebaseMessaging.instance);
 
   // Repositories
   final authRepo = AuthRepositoryImpl(authDS);
@@ -51,11 +52,12 @@ void main() async {
       providers: [
         BlocProvider(create: (_) => AuthBloc(authRepository: authRepo)),
         BlocProvider(create: (_) => DashboardBloc(getProfileUseCase)),
-        BlocProvider(create: (_) =>
-            NotificationBloc(getDeviceTokenUseCase, subscribeUseCase)
-              ..add(NotificationInit())
-              ..add(NotificationSubscribe("all")) // auto-subscribe
-        ),
+        BlocProvider(
+            create: (_) =>
+                NotificationBloc(getDeviceTokenUseCase, subscribeUseCase)
+                  ..add(NotificationInit())
+                  ..add(NotificationSubscribe("all")) // auto-subscribe
+            ),
       ],
       child: const MyApp(),
     ),

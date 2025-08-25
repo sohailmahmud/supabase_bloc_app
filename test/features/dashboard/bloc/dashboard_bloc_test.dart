@@ -67,5 +67,3 @@ void main() {
     bloc.add(DashboardLoad('boom'));
   });
 }
-
-

@@ -12,11 +12,8 @@ class DashboardRemoteDataSourceImpl implements DashboardRemoteDataSource {
 
   @override
   Future<ProfileModel?> getProfile(String userId) async {
-    final data = await client
-        .from('profiles')
-        .select()
-        .eq('id', userId)
-        .maybeSingle();
+    final data =
+        await client.from('profiles').select().eq('id', userId).maybeSingle();
     if (data == null) return null;
     return ProfileModel.fromJson(data);
   }
