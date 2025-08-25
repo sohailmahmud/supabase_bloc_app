@@ -116,15 +116,15 @@ created_at timestamp default now()
 ```
 
 #### 4. Configure Firebase
-* Install FlutterFire CLI:
+Install FlutterFire CLI:
 ```bash
 dart pub global activate flutterfire_cli
 ```
-* Run: 
+Run: 
 ```bash
 flutterfire configure
 ```
-* This generates lib/firebase_options.dart with DefaultFirebaseOptions.
+This generates lib/firebase_options.dart with DefaultFirebaseOptions.
 
 #### 5. Setup Firebase Cloud Messaging
 * Enable FCM in Firebase console
@@ -171,7 +171,7 @@ flutter run
 
 ### 📂 Example Key Files
 * main.dart → initializes Firebase & Supabase
-* my_app.dart → root widget with routing & bloc setup
+* app.dart → root widget with routing & bloc setup
 * login_page.dart → login form with AuthBloc
 * dashboard_page.dart → user profile + logout
 * notification_bloc.dart → FCM token registration + listeners
