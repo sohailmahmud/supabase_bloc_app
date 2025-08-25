@@ -94,8 +94,8 @@ flowchart TD
 
 #### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/flutter_supabase_bloc_app.git
-cd flutter_supabase_bloc_app
+git clone https://github.com/sohailmahmud/supabase_bloc_app.git
+cd supabase_bloc_app
 ```
 
 #### 2. Install Dependencies
