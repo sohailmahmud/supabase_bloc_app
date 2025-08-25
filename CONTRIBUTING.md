@@ -37,6 +37,7 @@ flutter run
 ### 4. Follow Project Structure
 This project uses Clean Architecture with features/ directories:
 
+```text
 features/
 ├── auth/
 │   ├── data/
@@ -44,6 +45,7 @@ features/
 │   └── presentation/
 ├── dashboard/
 └── notifications/
+```
 
 Please respect this layering:
 * data/ → models, repositories, API calls
@@ -61,7 +63,7 @@ flutter format .
 
 ---
 
-## 📝 Commit Messages
+## 📝 Commit Message
 
 We follow the [Conventional Commits](https://www.conventionalcommits.org/) standard:
 
