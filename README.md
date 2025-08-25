@@ -1,5 +1,10 @@
 # 📱 Flutter Supabase App (Clean Architecture + BLoC + Firebase)
 
+![Flutter CI](https://github.com/sohailmahmud/supabase_bloc_app/actions/workflows/flutter_ci.yml/badge.svg)
+![Flutter](https://img.shields.io/badge/flutter-3.35.0-blue.svg)
+[![Coverage Status](https://coveralls.io/repos/github/sohailmahmud/supabase_bloc_app/badge.svg?branch=main)](https://coveralls.io/github/sohailmahmud/supabase_bloc_app?branch=main)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
 A Flutter app with:
 
 - **Supabase** for Authentication & Database  
