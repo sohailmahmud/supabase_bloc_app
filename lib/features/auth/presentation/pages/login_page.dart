@@ -25,8 +25,8 @@ class _LoginPageState extends State<LoginPage> {
     if (_formKey.currentState!.validate()) {
       context.read<AuthBloc>().add(
             AuthLogin(
-              _emailController.text.trim(),
-              _passwordController.text.trim(),
+              email: _emailController.text.trim(),
+              password: _passwordController.text.trim(),
             ),
           );
     }
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: BlocConsumer<AuthBloc, AuthState>(
         listener: (context, state) {
-          if (state is AuthError) {
+          if (state is AuthFailure) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text(state.message)),
             );

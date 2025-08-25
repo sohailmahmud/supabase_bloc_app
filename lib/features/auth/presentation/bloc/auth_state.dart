@@ -7,11 +7,11 @@ abstract class AuthState extends Equatable {
 
 class AuthInitial extends AuthState {}
 class AuthLoading extends AuthState {}
-class AuthAuthenticated extends AuthState {
-  final UserEntity user;
-  AuthAuthenticated(this.user);
+class AuthSuccess extends AuthState {
+  final String userId;
+  AuthSuccess({required this.userId});
 }
-class AuthError extends AuthState {
+class AuthFailure extends AuthState {
   final String message;
-  AuthError(this.message);
+  AuthFailure({required this.message});
 }

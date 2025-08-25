@@ -23,13 +23,13 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocBuilder<AuthBloc, AuthState>(
         builder: (context, state) {
-          if (state is AuthAuthenticated) {
+          if (state is AuthSuccess) {
             return BlocBuilder<DashboardBloc, DashboardState>(
               builder: (context, dashboardState) {
                 if (dashboardState is DashboardInitial) {
                   // Load profile when authenticated
                   context.read<DashboardBloc>().add(
-                        DashboardLoad(state.user.id),
+                        DashboardLoad(state.userId),
                       );
                   return const Scaffold(
                     body: Center(child: CircularProgressIndicator()),
