@@ -113,6 +113,6 @@ You can also suggest new features by creating a **feature request issue**.
 
 ---
 
-Thanks again for contributing! 🙌
+Thanks again for contributing! 🙌 <br />
 Together, we’re building a scalable Flutter + Supabase + Firebase starter app 🚀
 
